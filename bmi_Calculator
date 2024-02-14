@@ -1,0 +1,38 @@
+import java.util.Scanner;
+
+public class bmi_calculator {
+
+	public static void main(String[] args) {
+		
+		Scanner data = new Scanner(System.in);
+		
+		System.out.print("Please enter your weight(kg) :");
+		
+		float weight_Of_User = data.nextFloat();
+		
+		System.out.print("Please enter your height(m) :");
+		
+		float height_Of_User = data.nextFloat();
+		
+		float bmi_Value = weight_Of_User/(height_Of_User*height_Of_User);
+		
+		System.out.print("Your bmi value is " + bmi_Value);
+		
+		if (bmi_Value > 30.0) {
+			
+		System.out.print("(The Obese Range)");
+		} else if (25.0 < bmi_Value && bmi_Value < 29.9) { 
+				
+		System.out.print("(The Overweight Range)");
+		} else if (18.5 < bmi_Value && bmi_Value < 24.9) {
+			
+			System.out.print("(The Healthy Weight Range)");
+		} else {
+			System.out.print("(The Underweight Range)");	
+		} 
+	
+		data.close();
+	}
+	
+
+}
